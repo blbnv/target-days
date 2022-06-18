@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "TargetDaysUtilityPackage",
+    name: "Modules",
     products: [
         .library(name: "DateUtilities", targets: ["DateUtilities"]),
         .library(name: "Storage", targets: ["Storage"]),
