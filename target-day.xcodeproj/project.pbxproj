@@ -17,6 +17,7 @@
 		1B6B9356285C7963004AD70F /* TargetDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6B9355285C7963004AD70F /* TargetDay.swift */; };
 		1B6B9358285C80FB004AD70F /* TargetDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6B9357285C80FB004AD70F /* TargetDayView.swift */; };
 		1B6B935B285CD18B004AD70F /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6B935A285CD18B004AD70F /* Storage.swift */; };
+		1B6B9367285DCC41004AD70F /* DateUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 1B6B9366285DCC41004AD70F /* DateUtilities */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +51,7 @@
 		1B6B9355285C7963004AD70F /* TargetDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetDay.swift; sourceTree = "<group>"; };
 		1B6B9357285C80FB004AD70F /* TargetDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetDayView.swift; sourceTree = "<group>"; };
 		1B6B935A285CD18B004AD70F /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
-		1B6B935C285DC66B004AD70F /* DateUtilities */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DateUtilities; sourceTree = "<group>"; };
+		1B6B9364285DCAC9004AD70F /* TargetDaysUtilityPackage */ = {isa = PBXFileReference; lastKnownFileType = text; path = TargetDaysUtilityPackage; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B6B9367285DCC41004AD70F /* DateUtilities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,11 +83,11 @@
 		1B6B9315285C7486004AD70F = {
 			isa = PBXGroup;
 			children = (
-				1B6B935C285DC66B004AD70F /* DateUtilities */,
 				1B6B9320285C7486004AD70F /* target-day */,
 				1B6B9331285C748A004AD70F /* target-dayTests */,
 				1B6B933B285C748A004AD70F /* target-dayUITests */,
 				1B6B931F285C7486004AD70F /* Products */,
+				1B6B9365285DCC41004AD70F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +104,7 @@
 		1B6B9320285C7486004AD70F /* target-day */ = {
 			isa = PBXGroup;
 			children = (
+				1B6B9364285DCAC9004AD70F /* TargetDaysUtilityPackage */,
 				1B6B9359285CD183004AD70F /* Services */,
 				1B6B9354285C795D004AD70F /* Model */,
 				1B6B9351285C7906004AD70F /* Views */,
@@ -162,6 +165,13 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		1B6B9365285DCC41004AD70F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,6 +189,7 @@
 			);
 			name = "target-day";
 			packageProductDependencies = (
+				1B6B9366285DCC41004AD70F /* DateUtilities */,
 			);
 			productName = "target-day";
 			productReference = 1B6B931E285C7486004AD70F /* My Target Days.app */;
@@ -619,6 +630,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1B6B9366285DCC41004AD70F /* DateUtilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DateUtilities;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1B6B9316285C7486004AD70F /* Project object */;
 }

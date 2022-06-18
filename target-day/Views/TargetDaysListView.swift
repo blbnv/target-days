@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import DateUtilities
 
 struct TargetDaysListView: View {
     
@@ -16,7 +17,10 @@ struct TargetDaysListView: View {
         NavigationView {
             List {
                 ForEach(days, id: \.self) { day in
-                    Text(day.eventName)
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text(day.eventName)
+                        Text("\(Date.daysBetween(start: Date(), end: day.date)) days")
+                    }
                 }
                 .onDelete { indexSet in
                     let index: Int = indexSet[indexSet.startIndex]
