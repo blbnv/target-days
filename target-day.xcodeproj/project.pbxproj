@@ -13,7 +13,6 @@
 		1B6B9333285C748A004AD70F /* target_dayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6B9332285C748A004AD70F /* target_dayTests.swift */; };
 		1B6B933D285C748A004AD70F /* target_dayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6B933C285C748A004AD70F /* target_dayUITests.swift */; };
 		1B6B933F285C748A004AD70F /* target_dayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6B933E285C748A004AD70F /* target_dayUITestsLaunchTests.swift */; };
-		1B6B9350285C78EE004AD70F /* Date+DaysBetween.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6B934F285C78EE004AD70F /* Date+DaysBetween.swift */; };
 		1B6B9353285C7911004AD70F /* TargetDaysListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6B9352285C7911004AD70F /* TargetDaysListView.swift */; };
 		1B6B9356285C7963004AD70F /* TargetDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6B9355285C7963004AD70F /* TargetDay.swift */; };
 		1B6B9358285C80FB004AD70F /* TargetDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6B9357285C80FB004AD70F /* TargetDayView.swift */; };
@@ -47,11 +46,11 @@
 		1B6B9338285C748A004AD70F /* target-dayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "target-dayUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B6B933C285C748A004AD70F /* target_dayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = target_dayUITests.swift; sourceTree = "<group>"; };
 		1B6B933E285C748A004AD70F /* target_dayUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = target_dayUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		1B6B934F285C78EE004AD70F /* Date+DaysBetween.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+DaysBetween.swift"; sourceTree = "<group>"; };
 		1B6B9352285C7911004AD70F /* TargetDaysListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetDaysListView.swift; sourceTree = "<group>"; };
 		1B6B9355285C7963004AD70F /* TargetDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetDay.swift; sourceTree = "<group>"; };
 		1B6B9357285C80FB004AD70F /* TargetDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetDayView.swift; sourceTree = "<group>"; };
 		1B6B935A285CD18B004AD70F /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		1B6B935C285DC66B004AD70F /* DateUtilities */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DateUtilities; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +81,7 @@
 		1B6B9315285C7486004AD70F = {
 			isa = PBXGroup;
 			children = (
+				1B6B935C285DC66B004AD70F /* DateUtilities */,
 				1B6B9320285C7486004AD70F /* target-day */,
 				1B6B9331285C748A004AD70F /* target-dayTests */,
 				1B6B933B285C748A004AD70F /* target-dayUITests */,
@@ -105,7 +105,6 @@
 				1B6B9359285CD183004AD70F /* Services */,
 				1B6B9354285C795D004AD70F /* Model */,
 				1B6B9351285C7906004AD70F /* Views */,
-				1B6B934E285C78DD004AD70F /* Extensions */,
 				1B6B9321285C7486004AD70F /* TargetDayApp.swift */,
 				1B6B9325285C748A004AD70F /* Assets.xcassets */,
 				1B6B9327285C748A004AD70F /* Preview Content */,
@@ -136,14 +135,6 @@
 				1B6B933E285C748A004AD70F /* target_dayUITestsLaunchTests.swift */,
 			);
 			path = "target-dayUITests";
-			sourceTree = "<group>";
-		};
-		1B6B934E285C78DD004AD70F /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				1B6B934F285C78EE004AD70F /* Date+DaysBetween.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		1B6B9351285C7906004AD70F /* Views */ = {
@@ -308,7 +299,6 @@
 				1B6B9358285C80FB004AD70F /* TargetDayView.swift in Sources */,
 				1B6B9356285C7963004AD70F /* TargetDay.swift in Sources */,
 				1B6B9353285C7911004AD70F /* TargetDaysListView.swift in Sources */,
-				1B6B9350285C78EE004AD70F /* Date+DaysBetween.swift in Sources */,
 				1B6B9322285C7486004AD70F /* TargetDayApp.swift in Sources */,
 				1B6B935B285CD18B004AD70F /* Storage.swift in Sources */,
 			);

@@ -1,17 +1,4 @@
-//
-//  Date+DaysBetween.swift
-//  target-day
-//
-//  Created by Alex Balabanov on 17.06.22.
-//
-
-import Foundation
-
-extension Date {
-    func daysBetween(date: Date) -> Int {
-        return Date.daysBetween(start: self, end: date)
-    }
-    
+public extension Date {
     static func daysBetween(start: Date, end: Date) -> Int {
         let calendar = Calendar.current
         
