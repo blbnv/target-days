@@ -11,7 +11,7 @@ import DateUtilities
 struct TargetDaysListView: View {
     
     @State var presentingModal = false
-    @State var days = Storage.shared.fetch()
+    @State var days: [TargetDay] = []
     
     var body: some View {
         NavigationView {
@@ -22,11 +22,6 @@ struct TargetDaysListView: View {
                         Text("\(Date.daysBetween(start: Date(), end: day.date)) days")
                     }
                 }
-                .onDelete { indexSet in
-                    let index: Int = indexSet[indexSet.startIndex]
-                    Storage.shared.delete(self.days[index])
-                    days = Storage.shared.fetch()
-                }
             }
             .navigationTitle("Target days")
             .toolbar {
@@ -34,9 +29,9 @@ struct TargetDaysListView: View {
                     self.presentingModal = true
                 }
                 .sheet(isPresented: $presentingModal) {
-                    TargetDayView() {
+                    TargetDayView() { day in
+                        self.days.append(day)
                         self.presentingModal = false
-                        days = Storage.shared.fetch()
                     }
                 }
             }

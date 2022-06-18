@@ -8,18 +8,16 @@
 import SwiftUI
 
 struct TargetDayView: View {
-    
     @State private var name: String = "Test"
     @State private var date: Date = Date()
-    var isDismissed: (() -> Void)?
+    var isDismissed: ((_ day: TargetDay) -> Void)?
     
     var body: some View {
         VStack(alignment: .leading) {
             TextField("Something", text: $name)
             DatePicker("Date", selection: $date)
             Button("Confirm") {
-                Storage.shared.add(.init(eventName: self.name, date: self.date))
-                isDismissed?()
+                isDismissed?(.init(eventName: self.name, date: self.date))
             }
         }
     }
