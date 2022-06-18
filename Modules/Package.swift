@@ -8,6 +8,7 @@ let package = Package(
     products: [
         .library(name: "DateUtilities", targets: ["DateUtilities"]),
         .library(name: "Storage", targets: ["Storage"]),
+        .library(name: "DaysService", targets: ["DaysService"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -16,5 +17,6 @@ let package = Package(
     targets: [
         .target(name: "DateUtilities", dependencies: []),
         .target(name: "Storage", dependencies: []),
+        .target(name: "DaysService", dependencies: []),
     ]
 )

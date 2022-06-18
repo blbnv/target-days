@@ -11,16 +11,15 @@ import DateUtilities
 struct TargetDaysListView: View {
     
     @State var presentingModal = false
-    @State var days: [TargetDay] = []
+    @State var days: [TargetDay] = [.init(eventName: "Name", date: Date())]
     
     var body: some View {
         NavigationView {
             List {
                 ForEach(days, id: \.self) { day in
-                    VStack(alignment: .leading, spacing: 5) {
-                        Text(day.eventName)
-                        Text("\(Date.daysBetween(start: Date(), end: day.date)) days")
-                    }
+                    DayListItemView(title: day.eventName,
+                                  subtitle: "TBD",
+                                  date: "5 AM")
                 }
             }
             .navigationTitle("Target days")
@@ -42,5 +41,30 @@ struct TargetDaysListView: View {
 struct TargetDaysListView_Previews: PreviewProvider {
     static var previews: some View {
         TargetDaysListView()
+    }
+}
+
+struct DayListItemView: View {
+    var title: String
+    var subtitle: String
+    var date: String
+    
+    var body: some View {
+        HStack(alignment: .center) {
+            Image(systemName: "trash.circle.fill")
+                .font(.system(size: 30))
+                .foregroundColor(.gray)
+            VStack(alignment: .leading, spacing: 5) {
+                Text(self.title)
+                    .font(.headline)
+                Text(self.subtitle)
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+            }
+            Spacer()
+            Text(self.date)
+            NavigationLink("") {}
+                .frame(width: 10, alignment: .leading)
+        }
     }
 }
